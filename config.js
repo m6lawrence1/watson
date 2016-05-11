@@ -7,7 +7,7 @@ app.config(function ($routeProvider) {
 			templateUrl: "form.html"
 		})
 		.when("/output", {
-			controller: "app",
+			controller: "formCtrl",
 			templateUrl: "output.html"
 		})
 		.otherwise({redirectTo: "/"});

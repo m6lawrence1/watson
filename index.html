@@ -4,26 +4,15 @@
         <title>Watson</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
         <body ng-app="myModule">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
             <div class="col-md-3 leftnav">
                 <a href="#/home" class="firstlink">Home</a>
                 <a href="#/form">Input Cover Letter</a>
             </div>
             
             <div class="col-md-9 mainview" ng-view></div>
-        
-        
-        
-        
-        
-            
-            
-            
-            
-            
-        
         
         </body>
     
@@ -32,7 +21,9 @@
     
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.js"></script>
-    <script type='text/javascript' src='config.js'>
-    </script>
-    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="watson-personality.js"></script>
+    <script type='text/javascript' src='config.js'></script>
+    <script src='formCtrl.js'></script>
+    <script src='service.js'></script>
+<!--    <script type="text/javascript" src="app.js"></script>-->
 </html>

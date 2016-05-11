@@ -1,0 +1,23 @@
+{
+  "name": "watson",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m6lawrence1/watson.git"
+  },
+  "author": "Michael Lawrence",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m6lawrence1/watson/issues"
+  },
+  "homepage": "https://github.com/m6lawrence1/watson#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "watson-developer-cloud": "^1.5.0"
+  }
+}
