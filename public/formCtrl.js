@@ -1,23 +1,18 @@
 var app = angular.module('myModule');
 
-// app.controller('formCtrl', ['$scope', 'watsonService', function ($scope, watsonService) {
-//     console.log('num1');
-
-app.controller('formCtrl',function(
-    on('click', personalitize(){
-        $http({
-         method: 'GET',
-         url: '../index.js'
-     }))
+app.controller('formCtrl', function ($scope, $http){
+    $scope.personalitize = function () {
+        $http.post('/api', $scope.textInput)
          .then(function successCallback(response) {
-             var profileOutput = myService.valueSetter();
-             $scope.xx = profileOutput.xx;
-             $scope.xx = profileOutput.xx;
-             $scope.xx = profileOutput.xx;
-      }, function errorCallback(response) {
+//             var profileOutput = myService.valueSetter();
+//             $scope.xx = profileOutput.xx;
+            console.log(response);
+
+        }, function errorCallback(response) {
         alert('error');
-))
-  })
- });
-    console.log('this is the form controller');
-}]);
+        });
+  };
+});
+
+//    console.log('this is the form controller');
+//}]);
