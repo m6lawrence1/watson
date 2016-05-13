@@ -6,19 +6,21 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-        <body ng-app="myModule">
+        <body ng-app="myModule" ng-controller="formCtrl">
+
             <div class="col-md-3 leftnav">
                 <a href="#/home" class="firstlink">Home</a>
                 <a href="#/form">Input Cover Letter</a>
             </div>
-            
-            <div class="col-md-9 mainview" ng-view></div>
-        
+
+            <div class="col-md-9 mainview">
+                <ng-view></ng-view>
+            </div>
         </body>
-    
-    
-    
-    
+
+
+
+
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.js"></script>
     <script type='text/javascript' src='config.js'></script>
