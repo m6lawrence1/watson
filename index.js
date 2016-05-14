@@ -25,6 +25,7 @@ app.post('/api',function(req, res){
         } else {
             console.log(profile);
             res.send(profile);
+
         }
     });
 
