@@ -1,12 +1,8 @@
 var express = require('express');
+var express = require('express');
 var watson = require('watson-developer-cloud');
 var bodyParser = require('body-parser');
-// var profile = require('./service');
 var app = express();
-
-
-
-// var my_profile = "Call me Ishmael. Some years ago-never mind h-ow long precisely-having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world. It is a way I have of driving off the spleen and regulating the circulation. Whenever I find myself growing grim about the mouth; whenever it is a damp, drizzly November in my soul; whenever I find myself involuntarily pausing before coffin warehouses, and bringing up the rear of every funeral I meet; and especially whenever my hypos get such an upper hand of me, that it requires a strong moral principle to prevent me from deliberately stepping into the street, and methodically knocking people's hats off-then, I account it high time to get to sea as soon as I can.";
 
     app.use(bodyParser.urlencoded({ extended: false }))
 
@@ -21,18 +17,14 @@ app.post('/api',function(req, res){
         password: 'lSbzo8yacgjP',
         version: 'v2'
     });
-    
-   
-    
+
     var my_profile = req.body.body;
-//    console.log(req.body.body);
-//    console.log("this works");
-//     res.personality_insights();
     personality_insights.profile({text: my_profile}, function (err, profile) {
         if (err) {
             console.log(err)
         } else {
             console.log(profile);
+            res.send(profile);
         }
     });
 
