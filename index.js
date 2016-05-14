@@ -33,6 +33,8 @@ app.post('/api',function(req, res){
             console.log(err)
         } else {
             console.log(profile);
+            res.send(profile);
+            });
         }
     });
 

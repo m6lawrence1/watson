@@ -13,21 +13,14 @@ var app = angular.module('myModule');
 //         });
 //   };
 // });
-app.controller('formCtrl', function ($scope, $http, $templateCache){
+app.controller('formCtrl', function ($scope, $http){
     $scope.personalitize = function () {
-        $http.post('/api', {"body":$scope.textInput, cache: $templateCache})
+        $http.post('/api', {"body":$scope.textInput})
         // .success(response) {
         .then(function(response) {
-                 $scope.status = response.status;
-                 $scope.data = response.data;
-               }, function(response) {
-                 $scope.data = response.data || "Request failed";
-                 $scope.status = response.status;
-        //  .then(function successCallback(response) {
-            // $scope.children = response;
-            // $cookies.response=response;
-            console.log(data);
-            // $scope.moduleState = 'details';
+            console.log("response");
+//		    $scope.yay = response.data;
+//            console.log(data);
 
         }, function errorCallback(response) {
         alert('error');
