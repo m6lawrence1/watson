@@ -3,10 +3,28 @@
     <input type='text' ng-model='textInput' placeholder='Enter text here, must be more than 100 words'>
     <button type="submit" ng-click="personalitize()">Press the magic button!</button>
 
-    <table ng-model='response'>
+    <!-- <table ng-model='response'>
       <tr ng-repeat="child in children">
         <td>{{child.tree.children}}</td>
 
       </tr>
-    </table>
+    </table> -->
+<table ng-model="reponse">
+    <tr ng-repeat="child in children">
+        <td>{{child.tree.children[0].children[0].children[0].name}}</td>
+        <td>{{child.tree.children[0].children[0].children[0].percentage | number: 1}}</td><!--openess
+
+        <!--             <td> {{child.tree.children[0]}}</td>    </tr>
+ </table>
 </div>
+<!--  || filter:name -->
+
+<!-- <ul>
+    <li ng-repeat="child in children.tree">
+        <span>{{child.children($index)}}<span>
+        <ul>
+            <li ng-repeat="kid in child.tree">{{kid.child.tree}}</li>
+        </ul>
+    </li>
+</ul>
+ -->
