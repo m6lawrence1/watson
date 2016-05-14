@@ -5,7 +5,9 @@ app.controller('formCtrl', function ($scope, $http){
         $http.post('/api', {"body":$scope.textInput})
         .then(function(response) {
             console.log(response);
-            $scope.children=response;
+            $scope.children=response.data.tree.children[0].children[0].children;
+            $scope.children=response.data.tree.children[1].children[1].children;
+
         }, function errorCallback(response) {
         alert('error');
         });
