@@ -12,19 +12,23 @@
 <table ng-model="reponse">
     <tr ng-repeat="child in children">
         <td>{{child.name}}</td>
+        <td>{{child.percentage *100 | number:0}}%</td>
+    </tr>
+</table>
+<br>
+<table>
+    <tr ng-repeat="sub in subcat">
+        <td>{{sub.name}}</td>
+        <td>{{sub.percentage *100 | number:0}}%</td>
+    </tr>
+</table>
+<br>
+<table>
+    <tr ng-repeat="cat in subcat3">
+        <td>{{cat.name}}</td>
+        <td>{{cat.percentage *100 | number:0}}%</td>
     </tr>
 </table>
 
 
 </div>
-        <!--  || filter:name
-
-<!-- <ul>
-    <li ng-repeat="child in children.tree">
-        <span>{{child.children($index)}}<span>
-        <ul>
-            <li ng-repeat="kid in child.tree">{{kid.child.tree}}</li>
-        </ul>
-    </li>
-</ul>
- -->

@@ -6,7 +6,8 @@ app.controller('formCtrl', function ($scope, $http){
         .then(function(response) {
             console.log(response);
             $scope.children=response.data.tree.children[0].children[0].children;
-            $scope.children=response.data.tree.children[1].children[1].children;
+            $scope.subcat=response.data.tree.children[0].children[0].children[1].children;
+            $scope.subcat3=response.data.tree.children[0].children[0].children[2].children;
 
         }, function errorCallback(response) {
         alert('error');
