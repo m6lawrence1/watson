@@ -10,25 +10,54 @@
       </tr>
     </table> -->
 <table ng-model="reponse">
-    <tr ng-repeat="child in children">
-        <td>{{child.name}}</td>
-        <td>{{child.percentage *100 | number:0}}%</td>
+    <th>The Big 5</th>
+    <tr ng-repeat="big in big5">
+        <td>{{big.name}}</td>
+        <td>{{big.percentage *100 | number:0}}%</td>
     </tr>
 </table>
 <br>
 <table>
-    <tr ng-repeat="sub in subcat">
-        <td>{{sub.name}}</td>
-        <td>{{sub.percentage *100 | number:0}}%</td>
+    <th> Openness Characteristics</th>
+    <tr ng-repeat='open in openness'>
+        <td>{{open.name}}</td>
+        <td>{{open.percentage *100 | number:0}}%</td>
     </tr>
 </table>
 <br>
 <table>
-    <tr ng-repeat="cat in subcat3">
-        <td>{{cat.name}}</td>
-        <td>{{cat.percentage *100 | number:0}}%</td>
+    <th>Conscientiousness characteristics</th>
+    <tr ng-repeat="conscientious in conscientiousness">
+        <td>{{conscientious.name}}</td>
+        <td>{{conscientious.percentage *100 | number:0}}%</td>
     </tr>
 </table>
+<br>
+<table>
+    <th>Extraversion Characteristics</th>
+    <tr ng-repeat="extra in extraversion">
+        <td>{{extra.name}}</td>
+        <td>{{extra.percentage *100 | number:0}}%</td>
+    </tr>
+</table>
+<br>
+<table>
+    <th>Agreeableness Characteristics</th>
+    <tr ng-repeat='agreeable in agreeableness'>
+        <td>{{agreeable.name}}</td>
+        <td>{{agreeable.percentage *100 | number:0}}%</td>
+    </tr>
+</table>
+<br>
+<table>
+    <th> Emotional Range Characteristics</th>
+    <tr ng-repeat='emotion in emotional'>
+        <td>{{emotion.name}}</td>
+        <td>{{emotion.percentage *100 | number:0}}%</td>
+    </tr>
+</table>
+<br>
+
 
 
 </div>
