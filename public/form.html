@@ -1,63 +1,60 @@
 <div ng-controller='formCtrl'>
-    <label for ='form input'>Input Cover Letter Text</label>
-    <input type='text' ng-model='textInput' placeholder='Enter text here, must be more than 100 words'>
-    <button type="submit" ng-click="personalitize()">Press the magic button!</button>
-
-    <!-- <table ng-model='response'>
-      <tr ng-repeat="child in children">
-        <td>{{child.tree.children}}</td>
-
-      </tr>
-    </table> -->
-<table ng-model="reponse">
-    <th>The Big 5</th>
-    <tr ng-repeat="big in big5">
-        <td>{{big.name}}</td>
-        <td>{{big.percentage *100 | number:0}}%</td>
-    </tr>
-</table>
-<br>
-<table>
-    <th> Openness Characteristics</th>
-    <tr ng-repeat='open in openness'>
-        <td>{{open.name}}</td>
-        <td>{{open.percentage *100 | number:0}}%</td>
-    </tr>
-</table>
-<br>
-<table>
-    <th>Conscientiousness characteristics</th>
-    <tr ng-repeat="conscientious in conscientiousness">
-        <td>{{conscientious.name}}</td>
-        <td>{{conscientious.percentage *100 | number:0}}%</td>
-    </tr>
-</table>
-<br>
-<table>
-    <th>Extraversion Characteristics</th>
-    <tr ng-repeat="extra in extraversion">
-        <td>{{extra.name}}</td>
-        <td>{{extra.percentage *100 | number:0}}%</td>
-    </tr>
-</table>
-<br>
-<table>
-    <th>Agreeableness Characteristics</th>
-    <tr ng-repeat='agreeable in agreeableness'>
-        <td>{{agreeable.name}}</td>
-        <td>{{agreeable.percentage *100 | number:0}}%</td>
-    </tr>
-</table>
-<br>
-<table>
-    <th> Emotional Range Characteristics</th>
-    <tr ng-repeat='emotion in emotional'>
-        <td>{{emotion.name}}</td>
-        <td>{{emotion.percentage *100 | number:0}}%</td>
-    </tr>
-</table>
-<br>
+    <form class="col-md-12">
+        <label for ='form input'>Input Cover Letter Text</label>
+        <textarea ng-model='textInput' placeholder='Enter text here, must be more than 100 words'></textarea>
+        <div class='button-center'>
+        <button class="action-button shadow animate blue" ng-click="personalitize()">Personalitize</button>
+        </div>
+    </form>
 
 
-
+    <div class='results' class="col-md-12" >
+        <table ng-model="reponse">
+            <th>The Big 5</th>
+            <tr ng-repeat="big in big5">
+                <td>{{big.name}}</td>
+                <td>{{big.percentage *100 | number:0}}%</td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <th> Openness Characteristics</th>
+            <tr ng-repeat='open in openness'>
+                <td>{{open.name}}</td>
+                <td>{{open.percentage *100 | number:0}}%</td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <th>Conscientiousness characteristics</th>
+            <tr ng-repeat="conscientious in conscientiousness">
+                <td>{{conscientious.name}}</td>
+                <td>{{conscientious.percentage *100 | number:0}}%</td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <th>Extraversion Characteristics</th>
+            <tr ng-repeat="extra in extraversion">
+                <td>{{extra.name}}</td>
+                <td>{{extra.percentage *100 | number:0}}%</td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <th>Agreeableness Characteristics</th>
+            <tr ng-repeat='agreeable in agreeableness'>
+                <td>{{agreeable.name}}</td>
+                <td>{{agreeable.percentage *100 | number:0}}%</td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <th> Emotional Range Characteristics</th>
+            <tr ng-repeat='emotion in emotional'>
+                <td>{{emotion.name}}</td>
+                <td>{{emotion.percentage *100 | number:0}}%</td>
+            </tr>
+        </table>
+    </div>
 </div>
