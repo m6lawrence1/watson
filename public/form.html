@@ -3,13 +3,13 @@
         <label for ='form input'>Input Cover Letter Text</label>
         <textarea ng-model='textInput' placeholder='Enter text here, must be more than 100 words'></textarea>
         <div class='button-center'>
-        <button class="action-button shadow animate blue" ng-click="personalitize()">Personalitize</button>
+        <button class="action-button shadow animate blue" ng-click="personalitize()" href="#/output">Personalitize</button>
         </div>
     </form>
 
 
-    <div class='results' class="col-md-12" >
-        <table ng-model="reponse">
+    <div ng-if="showMe" class='results' class="col-md-12" >
+        <table>
             <th>The Big 5</th>
             <tr ng-repeat="big in big5">
                 <td>{{big.name}}</td>

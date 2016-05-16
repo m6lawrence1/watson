@@ -1,7 +1,9 @@
 var app = angular.module('myModule');
 
 app.controller('formCtrl', function ($scope, $http){
+    $scope.showMe = false;
     $scope.personalitize = function () {
+        $scope.showMe = !$scope.showMe;
         $http.post('/api', {"body":$scope.textInput})
         .then(function(response) {
             console.log(response);

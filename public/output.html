@@ -1,15 +1,50 @@
-<div ng-controller='formCtrl' ng-model="response">
-    <ul>
-    <li ng-repeat="child in children">{{child}}</li>
-    </ul>
-</div>
 
-<!-- didn't work 2
- --><!-- <div class="module" ng-controller="formCtrl">
-    <h1>Fruit Module</h1>
-    <div ng-switch="moduleState">
-        <div ng-switch-when="details">
-            <p>Details for {{ children }}</p>
-        </div>
-    </div>
-</div> -->
+    <div ng-controller='formCtrl' class='results' class="col-md-12" >
+        <table>
+            <th>The Big 5</th>
+            <tr ng-repeat="big in big5">
+                <td>{{big.name}}</td>
+                <td>{{big.percentage *100 | number:0}}%</td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <th> Openness Characteristics</th>
+            <tr ng-repeat='open in openness'>
+                <td>{{open.name}}</td>
+                <td>{{open.percentage *100 | number:0}}%</td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <th>Conscientiousness characteristics</th>
+            <tr ng-repeat="conscientious in conscientiousness">
+                <td>{{conscientious.name}}</td>
+                <td>{{conscientious.percentage *100 | number:0}}%</td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <th>Extraversion Characteristics</th>
+            <tr ng-repeat="extra in extraversion">
+                <td>{{extra.name}}</td>
+                <td>{{extra.percentage *100 | number:0}}%</td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <th>Agreeableness Characteristics</th>
+            <tr ng-repeat='agreeable in agreeableness'>
+                <td>{{agreeable.name}}</td>
+                <td>{{agreeable.percentage *100 | number:0}}%</td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <th> Emotional Range Characteristics</th>
+            <tr ng-repeat='emotion in emotional'>
+                <td>{{emotion.name}}</td>
+                <td>{{emotion.percentage *100 | number:0}}%</td>
+            </tr>
+        </table>
+</div>
