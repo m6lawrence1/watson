@@ -1,6 +1,7 @@
 var app = angular.module('myModule');
 
 app.controller('formCtrl', function ($scope, $http){
+    $scope.toggle = true;
     $scope.showMe = false;
     $scope.personalitize = function () {
         $scope.showMe = !$scope.showMe;
