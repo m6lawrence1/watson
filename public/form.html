@@ -14,8 +14,16 @@
             <tr ng-repeat="big in big5">
                 <td>{{big.name}}</td>
                 <td>{{big.percentage *100 | number:0}}%</td>
+                <td>
+                    <ul>
+                        <li ng-repeat="trait in big.children">
+                            {{trait.name}} {{trait.percentage * 100 | number:0}}%
+                        </li>
+                    </ul>
+                </td>
             </tr>
         </table>
+<!--
         <br>
         <table>
             <th> Openness Characteristics</th>
@@ -56,5 +64,6 @@
                 <td>{{emotion.percentage *100 | number:0}}%</td>
             </tr>
         </table>
+-->
     </div>
 </div>
