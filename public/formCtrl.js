@@ -8,8 +8,10 @@ app.directive('mydirective', function() {
 });
 
 app.controller('formCtrl', function ($scope, $http){
-
-    $scope.toggle = true;
+    $scope.reload = function()
+    {
+   location.reload(); 
+    };
     $scope.showMe = false;
     $scope.personalitize = function () {
         $scope.showMe = !$scope.showMe;
@@ -116,5 +118,9 @@ app.controller('formCtrl', function ($scope, $http){
         'Self-consciousness': 'Concern with rejection, embarrassment; shyness.',
         'Sensitivity to stress': 'Difficulty in coping with stress or pressure in difficult situations.'	 
 	};
+    
+    if ($scope.textInput) {
+        $scope.textInput = "";
+    }
 
 });
