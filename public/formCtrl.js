@@ -1,6 +1,14 @@
 var app = angular.module('myModule');
 
+app.directive('mydirective', function() {
+    return {
+        restrict: 'AE',
+        templateUrl: 'output.html'
+    };
+});
+
 app.controller('formCtrl', function ($scope, $http){
+
     $scope.toggle = true;
     $scope.showMe = false;
     $scope.personalitize = function () {
@@ -108,4 +116,5 @@ app.controller('formCtrl', function ($scope, $http){
         'Self-consciousness': 'Concern with rejection, embarrassment; shyness.',
         'Sensitivity to stress': 'Difficulty in coping with stress or pressure in difficult situations.'	 
 	};
+
 });
