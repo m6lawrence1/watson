@@ -5,20 +5,48 @@
 This will hide the div that contains text for results
 but commented until jquery works to make the div
 visible again once you hit the personalize button*/
-
+body {
+  background: url("img/bg-short.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
+}
 
 .heading {
     margin: 20px auto;
     text-align: center;
-    font-size: 40px;
-    font-family: 'Armata', sans-serif; font-weight: 800;
+    font-size: 5vw;
+    color: white;
+    letter-spacing: 3vw;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    padding: 2em 1em 1em 1em;
 }
 
+p {
+    text-align: center;
+    font-size: 2.5vw;
+    margin: 5vw;
+    color: white;
+    padding: 2vw;
+    letter-spacing: .25vw;
+    font-family: 'Raleway', sans-serif;
+    max-width: 1500px;
+    min-width: 100px
+
+}
+
+img {
+    display: block;
+    margin: auto;
+    width: 20vw;
+}
 
 /*Navigation Style*/
 nav {
 	font-family: 'Armata', sans-serif;
-    padding: 15px;  
+    padding: 15px;
 }
 nav a {
     margin: auto;
@@ -68,8 +96,8 @@ form {
     color: white;
     text-align: center;
 }
-:-ms-textarea-placeholder {  
-    color: white; 
+:-ms-textarea-placeholder {
+    color: white;
     text-align: center;
 }
 input, textarea {
@@ -88,7 +116,7 @@ label {
 	font-family: 'Armata', sans-serif;
 	font-size: 25px;
     margin: auto auto;
-	display: block; 
+	display: block;
 }
 /*End of form style*/
 
@@ -114,7 +142,7 @@ label {
 	font-family: 'Pacifico', cursive;
 	font-size: 23px;
 	color: #FFF;
-	text-decoration: none;	
+	text-decoration: none;
 }
 .blue
 {
@@ -129,8 +157,3 @@ label {
 	border-bottom: 1px solid;
 }
 /*End of button style*/
-
-
-
-
-
