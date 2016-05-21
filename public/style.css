@@ -1,10 +1,10 @@
 /*
-.results {
+Hides output.html by default*/
+.remove {
     visibility: hidden;
 }
-This will hide the div that contains text for results
-but commented until jquery works to make the div
-visible again once you hit the personalize button*/
+
+
 body {
   background: url("img/bg-short.png");
   -webkit-background-size: cover;

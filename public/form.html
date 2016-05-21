@@ -9,23 +9,5 @@
         </div>
     </form>
 
-<mydirective ng-if="showMe"></mydirective>
-<!--
-    <div ng-if="showMe" class='results' class="col-md-12" >
-        <table>
-            <th>The Big 5</th>
-            <tr ng-repeat="big in big5">
-                <td>{{big.name}}</td>
-                <td>{{big.percentage *100 | number:0}}%</td>
-                <td>
-                    <ul>
-                        <li ng-repeat="trait in big.children">
-                            {{trait.name}} {{trait.percentage * 100 | number:0}}%
-                            {{desc[trait.name]}}
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        </table>
-  </div>-->
+<mydirective ng-class="{remove: reveal}"></mydirective>
 </div>

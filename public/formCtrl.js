@@ -12,7 +12,7 @@ app.controller('formCtrl', function ($scope, $http){
     {
    location.reload(); 
     };
-    $scope.showMe = false;
+    $scope.reveal = true;
     $scope.personalitize = function () {
         $scope.showMe = !$scope.showMe;
         $http.post('/api', {"body":$scope.textInput})
@@ -23,6 +23,7 @@ app.controller('formCtrl', function ($scope, $http){
             }, function errorCallback(response) {
                 alert('error');
             });
+        $scope.reveal = false;
         
     };
     $scope.desc = {
