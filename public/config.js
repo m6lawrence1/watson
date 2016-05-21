@@ -6,6 +6,10 @@ app.config(function ($routeProvider) {
 			controller: "formCtrl",
 			templateUrl: "form.html"
 		})
+		.when("/about", {
+			controller: "aboutCtrl",
+			templateUrl: "about.html"
+		})
 		.when("/output", {
 			controller: "formCtrl",
 			templateUrl: "output.html"
