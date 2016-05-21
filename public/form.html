@@ -3,11 +3,13 @@
         <label for ='form input'>Input Cover Letter Text</label>
         <textarea ng-model='textInput' placeholder='Enter text here, must be more than 100 words'></textarea>
         <div class='button-center'>
-        <button class="action-button shadow animate blue" ng-click="personalitize(); toggle = !toggle">{{toggle && 'Personalitize!' || 'Reset'}}</button>
+            <button class="action-button shadow animate blue" ng-click="personalitize()">Watsonalize</button>
+            <button class="action-button shadow animate blue" ng-click="reload()">Reset</button>
         </div>
     </form>
 
-
+<mydirective ng-if="showMe"></mydirective>
+<!--
     <div ng-if="showMe" class='results' class="col-md-12" >
         <table>
             <th>The Big 5</th>
@@ -24,47 +26,5 @@
                 </td>
             </tr>
         </table>
-<!--
-        <br>
-        <table>
-            <th> Openness Characteristics</th>
-            <tr ng-repeat='open in openness'>
-                <td>{{open.name}}</td>
-                <td>{{open.percentage *100 | number:0}}%</td>
-            </tr>
-        </table>
-        <br>
-        <table>
-            <th>Conscientiousness characteristics</th>
-            <tr ng-repeat="conscientious in conscientiousness">
-                <td>{{conscientious.name}}</td>
-                <td>{{conscientious.percentage *100 | number:0}}%</td>
-            </tr>
-        </table>
-        <br>
-        <table>
-            <th>Extraversion Characteristics</th>
-            <tr ng-repeat="extra in extraversion">
-                <td>{{extra.name}}</td>
-                <td>{{extra.percentage *100 | number:0}}%</td>
-            </tr>
-        </table>
-        <br>
-        <table>
-            <th>Agreeableness Characteristics</th>
-            <tr ng-repeat='agreeable in agreeableness'>
-                <td>{{agreeable.name}}</td>
-                <td>{{agreeable.percentage *100 | number:0}}%</td>
-            </tr>
-        </table>
-        <br>
-        <table>
-            <th> Emotional Range Characteristics</th>
-            <tr ng-repeat='emotion in emotional'>
-                <td>{{emotion.name}}</td>
-                <td>{{emotion.percentage *100 | number:0}}%</td>
-            </tr>
-        </table>
--->
-    </div>
+  </div>-->
 </div>

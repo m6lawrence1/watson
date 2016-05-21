@@ -1,123 +1,92 @@
 var app = angular.module('myModule');
 
+app.directive('mydirective', function() {
+    return {
+        restrict: 'AE',
+        templateUrl: 'output.html'
+    };
+});
+
 app.controller('formCtrl', function ($scope, $http){
-    $scope.toggle = true;
+    $scope.reload = function()
+    {
+   location.reload(); 
+    };
     $scope.showMe = false;
     $scope.personalitize = function () {
         $scope.showMe = !$scope.showMe;
         $http.post('/api', {"body":$scope.textInput})
-        .then(function(response) {
-            console.log(response);
-            $scope.big5=response.data.tree.children[0].children[0].children;
-//            $scope.openness=response.data.tree.children[0].children[0].children[0].children;
-//            $scope.conscientiousness=response.data.tree.children[0].children[0].children[1].children;
-//            $scope.extraversion=response.data.tree.children[0].children[0].children[2].children;
-//            $scope.agreeableness=response.data.tree.children[0].children[0].children[3].children;
-//            $scope.emotional=response.data.tree.children[0].children[0].children[4].children;
-//            $scope.
+            .then(function(response) {
+                console.log(response);
+                $scope.big5=response.data.tree.children[0].children[0].children;
             
-        }, function errorCallback(response) {
-        alert('error');
-        });
+            }, function errorCallback(response) {
+                alert('error');
+            });
         
     };
     $scope.desc = {
-		"Reserved": "They are a private person and don't let many people in",
-        
-		"Outgoing": "They make friends easily and feel comfortable around other people",
-        
-		"Independent": "They have a strong desire to have time to themselves",
-		"Sociable": "They enjoy being in the company of others",
-
-		"Demure": "They prefer to listen than to talk, especially in group situations",
-		"Assertive": "They tend to speak up and take charge of situations, and They are comfortable leading groups",
-
-		"Laid-back": "They appreciate a relaxed pace in life",
-		"Energetic": "They enjoy a fast-paced, busy schedule with many activities",
-
-		"Calm-seeking": "They prefer activities that are quiet, calm, and safe",
-		"Excitement-seeking": "They are excited by taking risks and feel bored without lots of action going on",
-
-		"Solemn": "They are generally serious and do not joke much",
-		"Cheerful": "They are a joyful person and share that joy with the world",
-
-		"Cautious of others": "They are wary of other people's intentions and do not trust easily",
-		"Trusting of others": "They believe the best in others and trust people easily",
-
-		"Contrary": "They do not shy away from contradicting others",
-		"Accommodating": "They are easy to please and try to avoid confrontation",
-
-		"Self-focused": "They are more concerned with taking care of themselves than taking time for others",
-		"Altruistic": "They feel fulfilled when helping others, and will go out of their way to do so",
-
-		"Compromising": "They are comfortable using every trick in the book to get what They want",
-		"Uncompromising": "They think it is wrong to take advantage of others to get ahead",
-
-		"Proud": "They hold themselves in high regard, satisfied with who They are",
-		"Modest": "They are uncomfortable being the center of attention",
-
-		"Hardened": "They think that people should generally rely more on themselves than on other people",
-		"Empathetic": "They feel what others feel and are compassionate towards them",
-
-		"Self-doubting": "They frequently doubt their ability to achieve their goals",
-		"Self-assured": "They feel they have the ability to succeed in the tasks they set out to do",
-
-		"Unstructured": "They do not make a lot of time for organization in their daily life",
-		"Organized": "They feel a strong need for structure in their life",
-
-		"Carefree": "They do what they want, disregarding rules and obligations",
-		"Dutiful": "They take rules and obligations seriously, even when they're inconvenient",
-
-		"Content": "They are content with their level of accomplishment and do not feel the need to set ambitious goals",
-		"Driven": "They have high goals for themselves and work hard to achieve them",
-
-		"Intermittent": "They have a hard time sticking with difficult tasks for a long period of time",
-		"Persistent": "They can tackle and stick with tough tasks",
-
-		"Bold": "They would rather take action immediately than spend time deliberating making a decision",
-		"Deliberate": "They carefully think through decisions before making them",
-
-		"Self-assured": "They tend to feel calm and self-assured",
-		"Prone to worry": "They tend to worry about things that might happen",
-
+		"Reserved": "Private person and don't let many people in",
+		"Outgoing": "Make friends easily and feel comfortable around other people",
+		"Independent": "Have a strong desire to have time to themselves",
+		"Sociable": "Enjoy being in the company of others",
+		"Demure": "Prefer to listen than to talk, especially in group situations",
+		"Assertive": "Tend to speak up and take charge of situations, and They are comfortable leading groups",
+		"Laid-back": "Appreciate a relaxed pace in life",
+		"Energetic": "Enjoy a fast-paced, busy schedule with many activities",
+		"Calm-seeking": "Prefer activities that are quiet, calm, and safe",
+		"Solemn": "Generally serious and do not joke much",
+		"Cheerful": "Joyful person and share that joy with the world",
+		"Cautious of others": "Wary of other people's intentions and do not trust easily",
+		"Trusting of others": "Believe the best in others and trust people easily",
+		"Contrary": "Do not shy away from contradicting others",
+		"Accommodating": "Easy to please and try to avoid confrontation",
+		"Self-focused": "More concerned with taking care of themselves than taking time for others",
+		"Altruistic": "Feel fulfilled when helping others, and will go out of their way to do so",
+		"Compromising": "Comfortable using every trick in the book to get what They want",
+		"Uncompromising": "Think it is wrong to take advantage of others to get ahead",
+		"Proud": "Hold themselves in high regard, satisfied with who They are",
+		"Modest": "Uncomfortable being the center of attention",
+		"Hardened": "Think that people should generally rely more on themselves than on other people",
+		"Empathetic": "Feel what others feel and are compassionate towards them",
+		"Self-doubting": "Frequently doubt their ability to achieve their goals",
+		"Self-assured": "Tend to feel they have the ability to succeed in the tasks they set out to do",
+		"Unstructured": "Do not make a lot of time for organization in their daily life",
+		"Organized": "Feel a strong need for structure in their life",
+		"Carefree": "Do what they want, disregarding rules and obligations",
+		"Dutiful": "Take rules and obligations seriously, even when they're inconvenient",
+		"Driven": "Has high goals for themselves and work hard to achieve them",
+		"Intermittent": "Has a hard time sticking with difficult tasks for a long period of time",
+		"Persistent": "Can tackle and stick with tough tasks",
+		"Bold": "Would rather take action immediately than spend time deliberating making a decision",
+		"Deliberate": "Carefully think through decisions before making them",
+//duplicate		"Self-assured": "Tend to feel calm and self-assured",
 		"Mild-tempered": "It takes a lot to get them angry",
-		"Fiery": "They have a fiery temper, especially when things do not go their way",
+		"Content": "Generally comfortable with themselves as they are",
+		"Confident": "Hard to embarrass and are self-confident most of the time",
+		"Self-conscious": "Sensitive about what others might be thinking about them",
+		"Self-controlled": "Has control over their desires, which are not particularly intense",
+		"Hedonistic": "Feel their desires strongly and are easily tempted by them",
+		"Calm under pressure": "Handles unexpected events calmly and effectively",
+		"Susceptible to stress": "More easily overwhelmed in stressful situations",
+		"Down-to-earth": "Prefer facts over fantasy",
+		"Imaginative": "Has a wild imagination",
+		"Unconcerned with art": "Less concerned with artistic or creative activities than most people who participated in our surveys",
+		"Appreciative of art": "Enjoys beauty and seeks out creative experiences",
+		"Dispassionate": "Do not frequently think about or openly express their emotions",
+		"Emotionally aware": "Aware of their feelings and how to express them",
+		"Consistent": "Enjoys familiar routines and prefers not to deviate from them",
+		"Adventurous": "Eager to experience new things",
+		"Concrete": "Prefer dealing with the world as it is, rarely considering abstract ideas",
+		"Philosophical": "Open to and intrigued by new ideas and love to explore them",
+		"Respectful of authority": "Prefer following with tradition in order to maintain a sense of stability",
 
-		"Content": "They are generally comfortable with themself as they are",
-		"Melancholy": "They think quite often about the things they are unhappy about",
-
-		"Confident": "They are hard to embarrass and are self-confident most of the time",
-		"Self-conscious": "They are sensitive about what others might be thinking about them",
-	
-		"Self-controlled": "They have control over their desires, which are not particularly intense",
-		"Hedonistic": "They feel their desires strongly and are easily tempted by them",
-
-		"Calm under pressure": "They handle unexpected events calmly and effectively",
-		"Susceptible to stress": "They are easily overwhelmed in stressful situations",
-
-		"Down-to-earth": "They prefer facts over fantasy",
-		"Imaginative": "They have a wild imagination",
-		
-		"Unconcerned with art": "They are less concerned with artistic or creative activities than most people who participated in our surveys",
-		"Appreciative of art": "They enjoy beauty and seek out creative experiences",
-		
-		"Dispassionate": "They do not frequently think about or openly express their emotions",
-		"Emotionally aware": "They are aware of their feelings and how to express them",
-
-		"Consistent": "They enjoy familiar routines and prefer not to deviate from them",
-		"Adventurous": "They are eager to experience new things",
-		
-		"Concrete": "They prefer dealing with the world as it is, rarely considering abstract ideas",
-		"Philosophical": "They are open to and intrigued by new ideas and love to explore them",
-			 
-		"Respectful of authority": "They prefer following with tradition in order to maintain a sense of stability",
-		"Authority-challenging": "They prefer to challenge authority and traditional values to help bring about positive changes",
         
-	    'Openness': 'Openness to experience. Higher: Intellectually curious, emotionally-aware, sensitive to beauty and willing to try new things.\nLower: Preferring the plain, straightforward, and obvious over the complex, ambiguous, and subtle.',
-        'Conscientiousness': 'Higher: More self-disciplined, dutiful, or aiming for achievement against measures or outside expectations.\nLower: More likely to prefer the spontaneous over the planned.',
-        'Introversion/Extraversion': 'Higher: More energetic and pronounced engagement with the external world. Likes high group visibility, talking, and asserting themselves.\nLower: Needs less stimulation and are more independent of their social world. It does not mean they are shy, un-friendly, or antisocial.',
-        'Agreeableness': 'Higher: Value getting along with others. They have a more optimistic view of human nature.\nLower: Value self interests over others. They are more skeptical of others\' motives.',
-        'Emotional range': '**This demo cannot diagnose a mental illness.** Higher: More likely to have negative emotions or get upset. It could mean they are going through a tough time.\nLower: More calm and less likely to get upset. It does not mean they are positive, or happy people.',
+	    'Openness': 'Openness to experience. Higher >50%: Intellectually curious, emotionally-aware, sensitive to beauty and willing to try new things. Lower <50%: Preferring the plain, straightforward, and obvious over the complex, ambiguous, and subtle.',
+        'Conscientiousness': 'Higher >50%: More self-disciplined, dutiful, or aiming for achievement against measures or outside expectations.Lower <50%: More likely to prefer the spontaneous over the planned.',
+        'Introversion/Extraversion': 'Higher >50%: More energetic and pronounced engagement with the external world. Likes high group visibility, talking, and asserting themselves.Lower <50%: Needs less stimulation and are more independent of their social world. It does not mean they are shy, un-friendly, or antisocial.',
+        'Agreeableness': 'Higher >50%: Value getting along with others. They have a more optimistic view of human nature.Lower <50%: Value self interests over others. They are more skeptical of others\' motives.',
+        'Emotional range': '**This demo cannot diagnose a mental illness.** Higher >50%: More likely to have negative emotions or get upset. It could mean they are going through a tough time.Lower <50%: More calm and less likely to get upset. It does not mean they are positive, or happy people.',
         'Adventurousness': 'Eagerness to trying new activities and experiencing new things.',
         'Artistic interests': 'Appreciation for art and beauty, both man-made and in nature.',
         'Emotionality': 'Emotional availability; awareness of own feelings.',
@@ -148,5 +117,10 @@ app.controller('formCtrl', function ($scope, $http){
         'Impulsiveness': 'Tendency to act on cravings and urges rather over resisting them or delaying gratification.',
         'Self-consciousness': 'Concern with rejection, embarrassment; shyness.',
         'Sensitivity to stress': 'Difficulty in coping with stress or pressure in difficult situations.'	 
-	}
+	};
+    
+    if ($scope.textInput) {
+        $scope.textInput = "";
+    }
+
 });
