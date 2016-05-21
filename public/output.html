@@ -1,17 +1,17 @@
 
+<h3 id="outputHeader">The Big Five</h3>
         <table>
-            <th>The Big 5</th>
+            <!-- <th id="outputHeader">The Big 5</th> -->
             <tr ng-repeat="big in big5">
-                <td>{{big.name}}</td>
-                <td>{{big.percentage *100 | number:0}}%</td>
+                <td id="trait">{{big.name}}</td>
+                <td id="percentage">{{big.percentage *100 | number:0}}%</td>
                 <td>
                     <ul>
                         <li ng-repeat="trait in big.children">
-                            {{trait.name}} {{trait.percentage * 100 | number:0}}%
+                            {{trait.name}}: {{trait.percentage * 100 | number:0}}%<br>
                             {{desc[trait.name]}}
                         </li>
                     </ul>
                 </td>
             </tr>
         </table>
-

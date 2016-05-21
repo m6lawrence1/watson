@@ -4,13 +4,14 @@ app.directive('mydirective', function() {
     return {
         restrict: 'AE',
         templateUrl: 'output.html'
+        // element.addClass('myClass')
     };
 });
 
 app.controller('formCtrl', function ($scope, $http){
     $scope.reload = function()
     {
-   location.reload(); 
+   location.reload();
     };
     $scope.reveal = true;
     $scope.personalitize = function () {
@@ -19,12 +20,12 @@ app.controller('formCtrl', function ($scope, $http){
             .then(function(response) {
                 console.log(response);
                 $scope.big5=response.data.tree.children[0].children[0].children;
-            
+
             }, function errorCallback(response) {
                 alert('error');
             });
         $scope.reveal = false;
-        
+
     };
     $scope.desc = {
 		"Reserved": "Private person and don't let many people in",
@@ -82,7 +83,7 @@ app.controller('formCtrl', function ($scope, $http){
 		"Philosophical": "Open to and intrigued by new ideas and love to explore them",
 		"Respectful of authority": "Prefer following with tradition in order to maintain a sense of stability",
 
-        
+
 	    'Openness': 'Openness to experience. Higher >50%: Intellectually curious, emotionally-aware, sensitive to beauty and willing to try new things. Lower <50%: Preferring the plain, straightforward, and obvious over the complex, ambiguous, and subtle.',
         'Conscientiousness': 'Higher >50%: More self-disciplined, dutiful, or aiming for achievement against measures or outside expectations.Lower <50%: More likely to prefer the spontaneous over the planned.',
         'Introversion/Extraversion': 'Higher >50%: More energetic and pronounced engagement with the external world. Likes high group visibility, talking, and asserting themselves.Lower <50%: Needs less stimulation and are more independent of their social world. It does not mean they are shy, un-friendly, or antisocial.',
@@ -117,9 +118,9 @@ app.controller('formCtrl', function ($scope, $http){
         'Melancholy': 'Normal tendency to experience feelings of guilt, sadness, hopelessness, or loneliness. **This demo cannot diagnose a mental illness.**',
         'Impulsiveness': 'Tendency to act on cravings and urges rather over resisting them or delaying gratification.',
         'Self-consciousness': 'Concern with rejection, embarrassment; shyness.',
-        'Sensitivity to stress': 'Difficulty in coping with stress or pressure in difficult situations.'	 
+        'Sensitivity to stress': 'Difficulty in coping with stress or pressure in difficult situations.'
 	};
-    
+
     if ($scope.textInput) {
         $scope.textInput = "";
     }
