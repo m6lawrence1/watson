@@ -9,7 +9,7 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; */
+  background-size: cover;
 }
 
 .heading {
@@ -41,7 +41,7 @@ img {
     margin: auto;
     width: 15vw;
 }
-a.button { /* link buttons */
+a.smooth { /* link buttons */
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
     text-transform: uppercase;
