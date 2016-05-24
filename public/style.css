@@ -9,7 +9,7 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover; */
 }
 
 .heading {
@@ -41,7 +41,7 @@ img {
     margin: auto;
     width: 15vw;
 }
-a.smooth { /* link buttons */
+a.button { /* link buttons */
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
     text-transform: uppercase;
@@ -82,7 +82,7 @@ button { /* form buttons */
 /*     display: block;
  *//*     margin: 10px auto;
  */    text-align: center;
-    padding-bottom: 100px;
+    padding-bottom: 25px;
 }
 button:hover {
 	background-color: #ff877b;
