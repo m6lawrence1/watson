@@ -155,10 +155,10 @@ table {
     margin: auto;
     color: white;
     background-color: rgba(255,255,255,.45);
-    max-width: 80vw;
-    border-radius: 20px;
-    margin:auto;
-    padding: 20px;
+    max-width: 90vw;
+    border-radius: 10px 10px 0px 0px;
+    margin: auto;
+    padding: 10px;
 
 }
 h3{
@@ -174,22 +174,22 @@ h3{
 #trait {
     padding: 25px 0px 25px 20px;
     font-family: 'Raleway', sans-serif;
-/*     text-transform: uppercase;
- */    color: #163342;
-    font-size: 1.5vw;
+    color: #163342;
+    font-size: 2vw;
     text-align: left;
-    vertical-align: top;
+    font-weight: bold;
+   vertical-align: top;
 }
 li {
-    padding-top: 5px;
+    padding-top: 2px;
     font-family: 'Raleway', sans-serif;
     color: #163342;
-    font-size: 1.25vw;
+    font-size: 1.75vw;
     text-align: left;
     vertical-align: baseline;
 }
 #percentage {
-    padding: 25px;
+    padding: 25px 15px;
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
     color: #163342;
@@ -199,11 +199,13 @@ li {
     vertical-align: top;
 }
 ul {
-    padding-bottom: 50px;
-    padding-right: 25px;
+    margin-right: 10px;
+    margin-top: 10px;
     padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 5px;
     background-color: rgba(255, 255, 255, 0.15);
-    border-radius: 20px;
+    border-radius: 10px;
 }
 .about {
     display: inline;

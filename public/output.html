@@ -3,7 +3,7 @@
         <table>
             <!-- <th id="outputHeader">The Big 5</th> -->
             <tr ng-repeat="big in big5">
-                <td id="trait">{{big.name}}</td>
+                <td id="trait">{{big.name}} <!-- {{big.percentage *100 | number:0}}% --></td>
                 <td id="percentage">{{big.percentage *100 | number:0}}%</td>
                 <td>
                     <ul>
