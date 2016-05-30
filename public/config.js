@@ -7,7 +7,7 @@ app.config(function ($routeProvider) {
 			templateUrl: "form.html"
 		})
 		.when("/about", {
-			controller: "aboutCtrl",
+			controller: "",
 			templateUrl: "about.html"
 		})
 		.when("/output", {

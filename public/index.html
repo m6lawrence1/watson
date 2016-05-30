@@ -8,26 +8,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body ng-app="myModule">
-        <h1 class='heading'>Watson Recruit</h1>
-        <img src="img/logo.png">
-    <!--     <nav class="col-md-12 nav">
-        <a href="#/home" class="home">Home</a>
-        <a href="#/form" class="button">Try it</a>
-    </nav> -->
-    <p>Recruit the best candidate for the job with Watson Recruit. Using IBM's most intelligent technology platform, Watson, Watson Recruit will analyze a candidates cover letter and reveal insights into their cognitive and social characteristics.</p>
+        <div id='wrapper'>
+            <h1 class='heading'>Watson Recruit</h1>
+            <img src="img/logo.png">
 
-        <div class="button-center">
+            <p>Recruit the best candidate for the job with Watson Recruit. Using IBM's most intelligent technology platform, Watson Recruit will analyze a candidates cover letter and reveal insights into their cognitive and social characteristics.</p>
 
-        <!-- <a href="#/" class="button">Home</a> -->
-        <a href="#/form" class="button">Use it</a>
-        <a href="#/about" class="button">About</a>
+            <div class="button-center">
+                <a href="#/form" class="button">Use it</a>
+                <a href="#/about" class="button">About</a>
+            </div>
+
+            <div ng-view></div>
+                <div id='footer'> This web application uses
+                <a href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/personality-insights.html"><font color="ff877b">IBM's Watson Personality Insight</font></a>  API to analyze text.
+                </div>
         </div>
-
-        <div ng-view></div>
     </body>
-
-    <footer> This web application uses
-     <a href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/personality-insights.html"><font color="ff877b">IBM's Watson Personality Insight</font></a>  API to analyze text.</footer>
 
 
 
@@ -35,7 +32,6 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src="jquery.js"></script>
     <script type='text/javascript' src='config.js'></script>
     <script src='formCtrl.js'></script>
 </html>
