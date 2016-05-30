@@ -4,6 +4,10 @@ var watson = require('watson-developer-cloud');
 var bodyParser = require('body-parser');
 var app = express();
 
+var port = process.env.PORT || 3000;
+    app.listen(port);
+
+
     app.use(bodyParser.urlencoded({ extended: false }))
 
     // parse application/json
@@ -31,10 +35,10 @@ app.post('/api',function(req, res){
 
 });
 
-var server = app.listen(3000, function () {
-    var host = server.address().address;
-    var port = server.address().port;
-    console.log("fml");
-});
+//var server = app.listen(3000, function () {
+//    var host = server.address().address;
+//    var port = server.address().port;
+//    console.log("fml");
+//});
 
 app.use(express.static(__dirname + '/public'));
