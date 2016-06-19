@@ -17,8 +17,8 @@ var port = process.env.PORT || 3000;
 
 app.post('/api',function(req, res){
     var personality_insights = watson.personality_insights({
-        username: '40e862ed-0b2a-48a5-87b9-be1d2d37e63b',
-        password: 'lSbzo8yacgjP',
+        username: '0c8ddde4-e322-4a1a-a521-511cd47afb84',
+        password: 'q2n2Za3Dbwai',
         version: 'v2'
     });
 
